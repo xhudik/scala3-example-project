@@ -25,6 +25,7 @@ def main(args: Array[String]): Unit =
   runExample("Pattern Matching")(PatternMatching.test())
 end main
 
+
 private def runExample(name: String)(f: => Unit): Unit =
   println(Console.MAGENTA + s"$name example:" + Console.RESET)
   f
