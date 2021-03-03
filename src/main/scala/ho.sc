@@ -1,10 +1,15 @@
 
+// Scala version + console colors
 println(Console.YELLOW + s"Scala version = ${util.Properties.versionString}")
-
 dotty.tools.dotc.config.Properties.versionString
 
-runExample("Trait Params")(TraitParams.test())
+//Scala 3 in Scala worksheet
+trait Speaker2:
+  def speak: String
 
+
+
+//what will be the outcome
 trait Speaker {
   def speak: String
 }
@@ -14,7 +19,9 @@ class Dog(name:String) extends Speaker {
 // if I invoke the following, I get a compile error
 val b = Dog("Bertik")
 println(b.speak)
-//println(b.speak()) // NOTE: I'm deliberately not using println(d.speak)
+println(b.speak()) // NOTE: I'm deliberately not using println(d.speak)
 //for (i <- 0 to 4) println(b.speak(i))
 
 
+
+runExample("Trait Params")(TraitParams.test())
